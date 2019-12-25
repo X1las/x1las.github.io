@@ -4,7 +4,7 @@ body {
 }
 
 .index-image {
-    background-image: url("/src/plantdesk.jpeg");
+    background-image: url("/src/plantdesk.jpg");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
