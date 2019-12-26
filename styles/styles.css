@@ -7,9 +7,9 @@ body {
     margin: 0px;
     background-image: url("/src/plantdesk.jpg");
     background-color: #cccccc;
+    height: 500px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .image-text {
