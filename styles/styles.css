@@ -6,7 +6,7 @@ body {
 .image-index {
     margin: 0px;
     height: auto;
-    width: auto;
+    width: 100%;
 }
 
 .image-text {
