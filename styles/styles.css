@@ -5,8 +5,8 @@ body {
 
 .image-index {
     margin: 0px;
-    height: 750px;
-    width: 100%;
+    height: 500px;
+    width: auto;
 }
 
 .image-text {
