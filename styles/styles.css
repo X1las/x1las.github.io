@@ -61,7 +61,7 @@ body {
 /* Image Styles */
 
 .image-right {
-    height: 500px;
+    height: 650px;
     width: auto;
     float: right;
     margin-left: 5%;
@@ -70,7 +70,7 @@ body {
 }
 
 .image-left {
-    height: 500px;
+    height: 650px;
     width: auto;
     float: left;
     margin-right: 5%;
