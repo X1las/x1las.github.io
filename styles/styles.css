@@ -74,6 +74,8 @@ body {
     object-position: center 20%;
     width: 100%;
     height: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .page {
