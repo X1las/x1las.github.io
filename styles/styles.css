@@ -39,6 +39,8 @@ body {
     width: auto;
     float: right;
     margin-left: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .image-left {
@@ -46,11 +48,15 @@ body {
     width: auto;
     float: left;
     margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .text-image-side {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .text-image-inside {
