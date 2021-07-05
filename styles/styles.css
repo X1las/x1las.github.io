@@ -31,7 +31,17 @@ footer {
 }
 
 .socials{
-    
+    padding: 20px;
+    margin: 5%;
+    border-radius: 35px;
+    background: rgba(76, 75, 75, 0.685);
+    text-align: center;
+}
+
+.socials img {
+    padding: 14px 16px;
+    height: 70px;
+    width: auto;
 }
 
 /* Main page element */
