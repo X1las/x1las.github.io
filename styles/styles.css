@@ -1,4 +1,4 @@
-/* Basic elements */
+/* IDs */
 
 #nospace {
     margin-top: 0%;
@@ -9,22 +9,41 @@
     height: 1000px;
 }
 
+/* Elements */
+
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../src/codebg.jpg');
     background-color: darkslategrey;
-}
-
-main {
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: whitesmoke;
-    background-clip: content-box;
 }
 
 footer {
     height: 300px;
     background-color: rgb(37, 37, 37);
+}
+
+/* Home Page divs */
+
+.hseg {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.socials{
+    
+}
+
+/* Main page element */
+
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.article {
+    background-color: whitesmoke;
+    background-clip: content-box;
 }
 
 /* Top Navigation Bar */
@@ -54,7 +73,6 @@ footer {
     color: #cacaca;
 }
 
-
 /* Main Page Segments */
 
 .banner {
@@ -80,7 +98,7 @@ footer {
     padding-right: 25%;
 }
 
-
+/* OLD STUFF BELOW */
 /* Image Styles */
 
 .image-right {
