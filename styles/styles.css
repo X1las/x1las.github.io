@@ -42,13 +42,13 @@ footer {
 .hseg {
     color: #000000;
     background: rgba(206, 204, 204, 0.884);
-    width: 20vw;
+    width: 20rem;
     height: auto;
 
     text-align: center;
 
-    padding: 1vw;
-    margin: 5vw auto;
+    padding: 1rem;
+    margin: 5rem auto;
     border-radius: 1rem;
 }
 
@@ -57,7 +57,7 @@ footer {
 .socials{
     color: #cacaca;
     background: rgba(43, 42, 42, 0.842);
-    width: 30vw;
+    width: 35vw;
     height: auto;
 
     text-align: center;
@@ -69,7 +69,7 @@ footer {
 
 .socials a {
     display: inline-block;
-    padding: 1rem;
+    padding: 1vw;
     margin-top: .5rem;
 }
 
@@ -78,7 +78,7 @@ footer {
 }
 
 .socials img {
-    height: auto;
+    height: 5vw;
     width: 5vw;
 }
 
