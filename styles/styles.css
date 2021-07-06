@@ -42,13 +42,13 @@ footer {
 .hseg {
     color: #000000;
     background: rgba(206, 204, 204, 0.884);
-    width: 20rem;
+    width: 20vw;
     height: auto;
 
     text-align: center;
 
-    padding: 1rem;
-    margin: 5rem auto;
+    padding: 1vw;
+    margin: 5vw auto;
     border-radius: 1rem;
 }
 
@@ -57,19 +57,19 @@ footer {
 .socials{
     color: #cacaca;
     background: rgba(43, 42, 42, 0.842);
-    width: 30rem;
+    width: 30vw;
     height: auto;
 
     text-align: center;
 
-    padding: 1rem;
+    padding: 1vw;
     margin: 3% auto;
-    border-radius: 2rem;
+    border-radius: 2vw;
 }
 
 .socials a {
     display: inline-block;
-    padding: 1rem 1rem;
+    padding: 1rem;
     margin-top: .5rem;
 }
 
@@ -78,8 +78,8 @@ footer {
 }
 
 .socials img {
-    height: 5rem;
-    width: auto;
+    height: auto;
+    width: 5vw;
 }
 
 /* Main Page Article */
