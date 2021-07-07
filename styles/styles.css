@@ -19,7 +19,6 @@
 body {
     margin: 0rem;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../src/codebg.jpg');
     background-color: darkslategrey;
 }
 
@@ -30,12 +29,6 @@ footer {
 
 /* HOMEPAGE CLASSES */
 /* Home class */
-
-/*
-.home {
-
-}
-*/
 
 /* Homepage Segment */
 
@@ -82,7 +75,7 @@ footer {
     width: 5vw;
 }
 
-/* Main Page Article */
+/* ABOUT PAGE CLASSES */
 
 .article {
     padding-left: 3%;
@@ -94,6 +87,22 @@ footer {
 
 .article div {
     background-color: rgba(245, 245, 245, 0.925);
+}
+
+/* PROJECTS-PAGE CLASSES */
+
+.proc {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../src/codebg.jpg');
+    background-color: darkslategrey;
+}
+
+.pleft {
+
+}
+
+.pright {
+    
 }
 
 /* Top Navigation Bar */
