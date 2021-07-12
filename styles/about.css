@@ -1,0 +1,15 @@
+/* ABOUT PAGE CLASSES */
+
+/* Article Segment Class */
+
+.article {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(61, 61, 61, 0.425);
+}
+
+.article div {
+    background-color: rgba(245, 245, 245, 0.925);
+}
