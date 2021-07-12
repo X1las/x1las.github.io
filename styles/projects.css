@@ -5,11 +5,11 @@
 /* Odd Projects Section */
 
 .project-odd {
-
+    text-align: left;
 }
 
 /* Even Projecets Section */
 
 .project-even {
-    
+    text-align: right;
 }
