@@ -55,6 +55,10 @@ main {
     color: rgb(53, 53, 53);
 }
 
+.catformer section p{
+    margin-bottom: .5rem;
+}
+
 .catformer section a{
     text-decoration: none;
 }
