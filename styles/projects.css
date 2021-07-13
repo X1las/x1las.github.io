@@ -46,5 +46,15 @@ main {
 
 .catformer section h3{
     font-size: 1.5rem;
+    margin-bottom: .3rem;
+}
+
+.catformer section h4{
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: rgb(53, 53, 53);
+}
+
+.catformer section a{
+    text-decoration: none;
 }
