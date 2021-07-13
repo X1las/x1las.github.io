@@ -1,15 +1,51 @@
 /* PROJECTS-PAGE CLASSES */
 
-/* Projects Main Class */
+main {
+    margin: 0% auto;
+}
+
+/* Projects Intro Section */
+
+.project-intro {
+    padding: 1rem 0%;
+    color: var(--clr-text-secondary);
+    background-color: var(--clr-element-dark);
+
+    text-align: center;
+}
 
 /* Odd Projects Section */
 
-.project-odd {
+.catformer {
+    height: 30rem;
+    width: auto;
+    max-width: 100%;
+
+    margin: auto;
+
+    background-image: url('../src/catformer.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     text-align: left;
+}
+
+.catformer section{
+    width: 20rem;
+    height: auto;
+
+    margin: auto;
+    padding: 1rem;
+    
+    background-color: var(--clr-element-section);
 }
 
 /* Even Projecets Section */
 
 .project-even {
+    height: 30rem;
+    width: 100%;
+
     text-align: right;
 }

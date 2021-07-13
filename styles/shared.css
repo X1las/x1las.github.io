@@ -1,28 +1,55 @@
 /* TRICKS */
 
+:root {
+    --clr-text-primary: #1b1b1b;
+    --clr-text-secondary: #cacaca;
 
+    --clr-active: #009b05;
+    --clr-select: rgb(14, 87, 0);
+    
+    --clr-element-primary: rgb(66, 66, 66);
+    --clr-element-secondary: darkslategrey;
+    --clr-element-dark: rgb(37, 37, 37);
+
+    --clr-element-transparent: rgba(43, 42, 42, 0.842);
+    --clr-element-highlight: rgba(75, 76, 75, 0.685);
+    --clr-element-section: rgba(206, 204, 204, 0.884);;
+}
+
+::after {
+    box-sizing: inherit;
+}
 
 /* ELEMENTS */
 
 body {
     margin: 0rem;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: darkslategrey;
-}
-
-main {
-    
+    background-color: var(--clr-element-secondary)
 }
 
 footer {
     height: 30rem;
     width: auto;
-    background-color: rgb(37, 37, 37);
+    background-color: var(--clr-element-dark);
 }
 
 html {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
+    color: var(--clr-text-primary);
+}
+
+h2 {
+    margin: 0%;
+}
+
+h3 {
+    margin: 0%;
+}
+
+p {
+    margin: 0%;
 }
 
 /* IDs */
@@ -43,12 +70,12 @@ html {
 .topnav {
     margin: 0px;
     overflow: hidden;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--clr-element-primary);
 }
 
 .topnav a {
     float: left;
-    color: #cacaca;
+    color: var(--clr-text-secondary);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -56,13 +83,13 @@ html {
 }
 
 .topnav a:hover {
-    background-color: rgb(14, 87, 0);
-    color: #cacaca;
+    background-color: var(--clr-select);
+    color: var(--clr-text-secondary);
 }
 
 .topnav a.active {
-    background-color: #009b05;
-    color: #cacaca;
+    background-color: var(--clr-active);
+    color: var(--clr-text-secondary);
 }
 
 /* Banner Class */

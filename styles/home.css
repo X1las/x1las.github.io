@@ -4,7 +4,7 @@
 
 .hseg {
     color: #000000;
-    background: rgba(206, 204, 204, 0.884);
+    background: var(--clr-element-section);
     width: 18rem;
     height: auto;
 
@@ -18,8 +18,8 @@
 /* Homepage Socials Bar */
 
 .socials{
-    color: #cacaca;
-    background: rgba(43, 42, 42, 0.842);
+    color: var(--clr-text-secondary);
+    background: var(--clr-element-transparent);
     width: 35vw;
     min-width: 15rem;
     height: auto;
@@ -38,7 +38,7 @@
 }
 
 .socials a:hover {
-    background: rgba(75, 76, 75, 0.685);
+    background: var(--clr-element-highlight);
     border-radius: 1.5rem;
 }
 
