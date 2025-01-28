@@ -57,7 +57,6 @@ main {
     /*box-shadow: 0px 0px 10px 0px var(--clr-element-secondary-shade);*/
 }
 
-
 .container {
     padding: 0 4rem;
     margin: auto;
@@ -65,7 +64,8 @@ main {
 }
 
 #refbox {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -82,5 +82,7 @@ main {
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0px 0px 10px 0px var(--clr-element-secondary-shade);
+    flex: 1 1 auto;
+    max-width: 100%;
 }
 
