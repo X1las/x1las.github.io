@@ -19,8 +19,6 @@
 
 header {
     text-align: center;
-    padding-top: 30px;
-    min-height: 70px;
     background-color: var(--clr-header-primary);
     color: var(--clr-header-secondary);
 }
@@ -28,30 +26,18 @@ header {
 header a {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: var(--clr-header-secondary);
     background-color: var(--clr-header-primary);
+    display: inline-block;
+    padding-left: 2rem;
+    float: right;
 }
-header ul {
-    padding: 0;
-    list-style: none;
-    background-color: var(--clr-header-primary);
-}
-header li {
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
-    background-color: var(--clr-header-primary);
-}
-header #branding {
-    float: left;
-}
-header #branding h1 {
-    margin: 0;
-}
+
 header nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 body {
@@ -70,18 +56,7 @@ main {
     color: var(--clr-text-secondary);
 }
 
-li {
-    background: var(--clr-element-primary);
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
 .container {
     padding: 0 4rem;
     margin: auto;
