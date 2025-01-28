@@ -54,7 +54,7 @@ main {
     height: fit-content;
     background-color: var(--clr-element-secondary);
     color: var(--clr-text-secondary);
-    /*box-shadow: 0px 0px 10px 0px var(--clr-element-secondary-shade);*/
+    box-shadow: 0px 0px 10px 0px var(--clr-element-secondary-shade);
 }
 
 .container {
