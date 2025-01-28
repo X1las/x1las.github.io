@@ -86,3 +86,17 @@ main {
     max-width: 100%;
 }
 
+hr {
+    border: 1;
+    height: .1rem;
+    background: var(--clr-text-secondary);
+    margin: 1rem 0;
+    width: 30rem;
+    max-width: 100%;
+
+}
+
+#half {
+    width: 15rem;
+    height: .05rem;
+}
