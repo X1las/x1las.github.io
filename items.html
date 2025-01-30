@@ -47,15 +47,19 @@
                         const result = featData.desc.join(" ");
                         const split = result.split(".");
                         const bold = split[0];
+                        var lines = ""
+                        for (let i = 1; i < split.length; i++) 
+                        {
+                            lines += ('<p>' + split[i] + '</p>');
+                        };
+
                         featElement.innerHTML = `
                             <h2>${featData.name}</h2>
                             <hr id="half">
-                            <p><b>${bold}</b></p>`
-                            
-                        for (let i = 1; i < split.length; i++) 
-                        {
-                            featElement.innerHTML += ('<p>' + split[i] + '</p>');
-                        };
+                            <p><b>${bold}</b></p>
+                            ${lines}
+                            <p><i>Price: ${featData.cost.quantity} ${featData.cost.unit}</i></p>
+                            `
                         
                         featsContainer.appendChild(featElement);
                     })
