@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Divinity Mechanics</title>
+    <title>D&D 5e - Items</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A short-guide on Divinity Mechanics for use in D&D 5e">
+    <meta name="description" content="A list of common D&D 5e items!">
     <link rel="stylesheet" href="shared.css">
     <script src="shared.js"></script>
 </head>
@@ -24,38 +24,44 @@
     </header>
 
     <main>
-        <h1>5th Edition Items</h1>
+        <h1>5th Edition Feats</h1>
         <hr>
-        
-        <p>Items are objects that characters can carry and use in the game. Here are some popular items from D&D 5e:</p>
-        
-        <h2>Bag of Holding</h2>
-        <hr id="half">
-        <p>This bag has an interior space considerably larger than its outside dimensions, roughly 2 feet in diameter at the mouth and 4 feet deep. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 15 pounds, regardless of its contents.</p>
-        
-        <h2>Ring of Protection</h2>
-        <hr id="half">
-        <p>This ring grants a +1 bonus to AC and saving throws while wearing it.</p>
-        
-        <h2>Wand of Magic Missiles</h2>
-        <hr id="half">
-        <p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the magic missile spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p>
-        
-        <h2>Boots of Elvenkind</h2>
-        <hr id="half">
-        <p>While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity (Stealth) checks that rely on moving silently.</p>
-        
-        <h2>Amulet of Health</h2>
-        <hr id="half">
-        <p>Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.</p>
-        
-        <h2>Ring of Feather Falling</h2>
-        <hr id="half">
-        <p>This ring has 3 charges. While wearing it, you can expend 1 charge as a reaction to falling to slow your descent so that you take no damage from the fall. The ring regains 1d3 expended charges daily at dawn.</p>
-        
-        <h2>Wand of Fireballs</h2>
-        <hr id="half">
-        <p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the fireball spell from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p>
-
+        <p>Feats are special abilities that give characters unique capabilities. Here are some popular feats from D&D 5e:</p>
+        <div id="feats-container"></div>
     </main>
+
+    <script>
+        const api = "https://www.dnd5eapi.co";
+        const featsApi = "/api/equipment";
+        const featsContainer = document.getElementById('feats-container');
+
+        fetch(api + featsApi)
+            .then(response => response.json())
+            .then(data => {
+                data.results.forEach(feat => {
+                    const featElement = document.createElement('div');
+                    const featApi = api + feat.url;
+                    fetch(featApi)
+                    .then(response => response.json())
+                    .then(featData => {;
+                        const result = featData.desc.join(" ");
+                        const split = result.split(".");
+                        const bold = split[0];
+                        featElement.innerHTML = `
+                            <h2>${featData.name}</h2>
+                            <hr id="half">
+                            <p><b>${bold}</b></p>`
+                            
+                        for (let i = 1; i < split.length; i++) 
+                        {
+                            featElement.innerHTML += ('<p>' + split[i] + '</p>');
+                        };
+                        
+                        featsContainer.appendChild(featElement);
+                    })
+                    .catch(error => console.error('Error fetching feat details:', error));
+                });
+            })
+            .catch(error => console.error('Error fetching feats:', error));
+    </script>
 </body>

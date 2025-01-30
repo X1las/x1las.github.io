@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Divinity Mechanics</title>
+    <title>D&D 5e - Spells</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A short-guide on Divinity Mechanics for use in D&D 5e">
+    <meta name="description" content="A list of D&D 5e spells!">
     <link rel="stylesheet" href="shared.css">
     <script src="shared.js"></script>
 </head>
@@ -24,100 +24,49 @@
     </header>
 
     <main>
-        <h1>D&D 5e Spells</h1>
+        <h1>5th Edition Feats</h1>
         <hr>
-        
-        <p>This is a list of spells available in Dungeons & Dragons 5th Edition.</p>
-        
-        <h2>Cantrips</h2>
-        <hr id="half">
-        <ul>
-            <li>Fire Bolt</li>
-            <li>Prestidigitation</li>
-            <li>Ray of Frost</li>
-            <li>Minor Illusion</li>
-        </ul>
-        
-        <h2>1st Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Magic Missile</li>
-            <li>Shield</li>
-            <li>Burning Hands</li>
-            <li>Detect Magic</li>
-        </ul>
-        
-        <h2>2nd Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Misty Step</li>
-            <li>Hold Person</li>
-            <li>Invisibility</li>
-            <li>Scorching Ray</li>
-        </ul>
-        
-        <h2>3rd Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Fireball</li>
-            <li>Counterspell</li>
-            <li>Fly</li>
-            <li>Dispel Magic</li>
-        </ul>
-        
-        <h2>4th Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Dimension Door</li>
-            <li>Polymorph</li>
-            <li>Greater Invisibility</li>
-            <li>Ice Storm</li>
-        </ul>
-        
-        <h2>5th Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Cloudkill</li>
-            <li>Wall of Force</li>
-            <li>Teleportation Circle</li>
-            <li>Hold Monster</li>
-        </ul>
-        
-        <h2>6th Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Disintegrate</li>
-            <li>Mass Suggestion</li>
-            <li>Sunbeam</li>
-            <li>True Seeing</li>
-        </ul>
-        
-        <h2>7th Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Finger of Death</li>
-            <li>Plane Shift</li>
-            <li>Teleport</li>
-            <li>Prismatic Spray</li>
-        </ul>
-        
-        <h2>8th Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Dominate Monster</li>
-            <li>Power Word Stun</li>
-            <li>Sunburst</li>
-            <li>Earthquake</li>
-        </ul>
-        
-        <h2>9th Level Spells</h2>
-        <hr id="half">
-        <ul>
-            <li>Wish</li>
-            <li>Time Stop</li>
-            <li>Meteor Swarm</li>
-            <li>Power Word Kill</li>
-        </ul>
+        <p>Feats are special abilities that give characters unique capabilities. Here are some popular feats from D&D 5e:</p>
+        <div id="feats-container"></div>
     </main>
+
+    <script>
+        const api = "https://www.dnd5eapi.co";
+        const featsApi = "/api/spells";
+        const featsContainer = document.getElementById('feats-container');
+
+        fetch(api + featsApi)
+            .then(response => response.json())
+            .then(data => {
+                data.results.forEach(feat => {
+                    const featElement = document.createElement('div');
+                    const featApi = api + feat.url;
+                    fetch(featApi)
+                    .then(response => response.json())
+                    .then(featData => {;
+                        const result = featData.desc.join(" ");
+                        const split = result.split(".");
+                        const bold = split[0];
+                        const classes = [];
+                        featData.classes.forEach(c => {
+                            classes.push(c.name);
+                        });
+                        featElement.innerHTML = `
+                            <h2>${featData.name} (${classes.join(", ")})</h2>
+                            <hr id="half">
+                            <p><b>${bold}</b></p>`
+                            
+                        for (let i = 1; i < split.length; i++) 
+                        {
+                            featElement.innerHTML += ('<p>' + split[i] + '</p>');
+                        };
+                        
+                        featsContainer.appendChild(featElement);
+                    })
+                    .catch(error => console.error('Error fetching feat details:', error));
+                });
+            })
+            .catch(error => console.error('Error fetching feats:', error));
+    </script>
 </body>
 </html>
