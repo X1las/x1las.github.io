@@ -87,14 +87,23 @@ main {
 }
 
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}
+
 td {
-    padding: 0.4rem;
+    padding: 0.1rem 0.3rem;
     text-align: center;
+    word-wrap: break-word;
 }
 
 th {
-    padding: 0.4rem;
+    padding: 0.1rem 0.3rem;
     text-align: center;
+    word-wrap: break-word;
 }
 
 hr {
