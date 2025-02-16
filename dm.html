@@ -6,8 +6,6 @@
     <title>Soundboard</title>
     <link rel="stylesheet" href="shared.css">
     <script src="shared.js"></script>
-    <style>
-    </style>
     <script>
         function toggleSound(soundId, button) {
             var sound = document.getElementById(soundId);
@@ -74,117 +72,101 @@
         <h2>Thematic Music</h2>
 
         <section class="soundboard">
-            
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound1', this)">Abandoned Ruins</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound1', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound1', this)">Abandoned Ruins</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound1', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound2', this)">Ancient Evil Awakens</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound2', this.value)">
-            <br>
-            </div>
-    
-            <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound3', this)">Ashen Trails</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound3', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound2', this)">Ancient Evil Awakens</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound2', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound4', this)">Catacombs</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound4', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound3', this)">Ashen Trails</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound3', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound5', this)">Cemetery</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound5', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound4', this)">Catacombs</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound4', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound6', this)">Cozy Tavern</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound6', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound5', this)">Cemetery</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound5', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound7', this)">Dark Castle</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound7', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound6', this)">Cozy Tavern</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound6', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound8', this)">Elven Garden</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound8', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound7', this)">Dark Castle</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound7', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound9', this)">Ethereal Plane</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound9', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound8', this)">Elven Garden</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound8', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound10', this)">Journey's End</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound10', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound9', this)">Ethereal Plane</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound9', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound11', this)">Long Rest</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound11', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound10', this)">Journey's End</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound10', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound12', this)">Shady Tavern</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound12', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound11', this)">Long Rest</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound11', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound13', this)">Small City</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound13', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound12', this)">Shady Tavern</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound12', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound14', this)">Suspense</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound14', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound13', this)">Small City</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound13', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound15', this)">Tense</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound15', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound14', this)">Suspense</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound14', this.value)">
             </div>
 
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('sound16', this)">End of the Quest</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound16', this.value)">
-            <br>
+                <button class="button" onclick="toggleSound('sound15', this)">Tense</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound15', this.value)">
+            </div>
+
+            <div class="sound-controls">
+                <button class="button" onclick="toggleSound('sound16', this)">End of the Quest</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound16', this.value)">
             </div>
         </section>
 
@@ -192,34 +174,35 @@
         <h2>Battle Music</h2>
 
         <section class="soundboard">
+
             <div class="sound-controls">
                 <button class="button" onclick="toggleSound('combat1', this)">Duel</button>
                 <br>
-                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat1', this.value)">
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('combat1', this.value)">
             </div>
 
             <div class="sound-controls">
                 <button class="button" onclick="toggleSound('combat2', this)">Dungeon Boss</button>
                 <br>
-                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat2', this.value)">
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('combat2', this.value)">
             </div>
 
             <div class="sound-controls">
                 <button class="button" onclick="toggleSound('combat3', this)">Eerie</button>
                 <br>
-                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat3', this.value)">
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('combat3', this.value)">
             </div>
 
             <div class="sound-controls">
                 <button class="button" onclick="toggleSound('combat4', this)">Skeletons</button>
                 <br>
-                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat4', this.value)">
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('combat4', this.value)">
             </div>
 
             <div class="sound-controls">
                 <button class="button" onclick="toggleSound('combat5', this)">The Last Fight</button>
                 <br>
-                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat5', this.value)">
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('combat5', this.value)">
             </div>
         </section>
 
@@ -227,125 +210,149 @@
         <h2>Ambience</h2>
 
         <section class="soundboard">
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience1', this)">Applause</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience1', this.value)">
+                <button class="button" onclick="toggleSound('ambience1', this)">Applause</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience1', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience2', this)">Approaching Storm</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience2', this.value)">
+                <button class="button" onclick="toggleSound('ambience2', this)">Approaching Storm</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience2', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience3', this)">Campfire Crackle</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience3', this.value)">
+                <button class="button" onclick="toggleSound('ambience3', this)">Campfire Crackle</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience3', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience4', this)">Cave</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience4', this.value)">
+                <button class="button" onclick="toggleSound('ambience4', this)">Cave</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience4', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience5', this)">Clock Tower</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience5', this.value)">
+                <button class="button" onclick="toggleSound('ambience5', this)">Clock Tower</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience5', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience6', this)">Clock Windups</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience6', this.value)">
+                <button class="button" onclick="toggleSound('ambience6', this)">Clock Windups</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience6', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience7', this)">Dark Chanting</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience7', this.value)">
+                <button class="button" onclick="toggleSound('ambience7', this)">Dark Chanting</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience7', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience8', this)">Distant Storm</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience8', this.value)">
+                <button class="button" onclick="toggleSound('ambience8', this)">Distant Storm</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience8', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience9', this)">Dogs Barking</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience9', this.value)">
+                <button class="button" onclick="toggleSound('ambience9', this)">Dogs Barking</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience9', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience10', this)">Forest - Day</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience10', this.value)">
+                <button class="button" onclick="toggleSound('ambience10', this)">Forest - Day</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience10', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience11', this)">Forest - Day 2</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience11', this.value)">
+                <button class="button" onclick="toggleSound('ambience11', this)">Forest - Day 2</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience11', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience12', this)">Forest - Day 3</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience12', this.value)">
+                <button class="button" onclick="toggleSound('ambience12', this)">Forest - Day 3</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience12', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience13', this)">Forest - Night</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience13', this.value)">
+                <button class="button" onclick="toggleSound('ambience13', this)">Forest - Night</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience13', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience14', this)">Forest - Creek</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience14', this.value)">
+                <button class="button" onclick="toggleSound('ambience14', this)">Forest - Creek</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience14', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience15', this)">Horse Gallop</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience15', this.value)">
+                <button class="button" onclick="toggleSound('ambience15', this)">Horse Gallop</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience15', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience16', this)">Monk Chanting</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience16', this.value)">
+                <button class="button" onclick="toggleSound('ambience16', this)">Monk Chanting</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience16', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience17', this)">Rumble</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience17', this.value)">
+                <button class="button" onclick="toggleSound('ambience17', this)">Rumble</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience17', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience18', this)">Ticking</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience18', this.value)">
+                <button class="button" onclick="toggleSound('ambience18', this)">Ticking</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience18', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience19', this)">Walking on Cement</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience19', this.value)">
+                <button class="button" onclick="toggleSound('ambience19', this)">Walking on Cement</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience19', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience20', this)">Walking on Gravel</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience20', this.value)">
+                <button class="button" onclick="toggleSound('ambience20', this)">Walking on Gravel</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience20', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience21', this)">Walking on Leaves</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience21', this.value)">
+                <button class="button" onclick="toggleSound('ambience21', this)">Walking on Leaves</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience21', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience22', this)">Walking on Road</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience22', this.value)">
+                <button class="button" onclick="toggleSound('ambience22', this)">Walking on Road</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience22', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience23', this)">War Horn</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience23', this.value)">
+                <button class="button" onclick="toggleSound('ambience23', this)">War Horn</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience23', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('ambience24', this)">Whispering</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience24', this.value)">
+                <button class="button" onclick="toggleSound('ambience24', this)">Whispering</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience24', this.value)">
             </div>
         </section>
 
@@ -354,34 +361,39 @@
 
         <section class="soundboard">
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('effect1', this)">Cultist Chant</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect1', this.value)">
+                <button class="button" onclick="toggleSound('effect1', this)">Cultist Chant</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect1', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('effect2', this)">Explosion</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect2', this.value)">
+                <button class="button" onclick="toggleSound('effect2', this)">Explosion</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect2', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('effect3', this)">Sword Blocked</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect3', this.value)">
+                <button class="button" onclick="toggleSound('effect3', this)">Sword Blocked</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect3', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('effect4', this)">Sword Critical</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect4', this.value)">
+                <button class="button" onclick="toggleSound('effect4', this)">Sword Critical</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect4', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('effect5', this)">Sword Hit</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect5', this.value)">
+                <button class="button" onclick="toggleSound('effect5', this)">Sword Hit</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect5', this.value)">
             </div>
+
             <div class="sound-controls">
-            <button class="button" onclick="toggleSound('effect6', this)">Wood Impact</button>
-            <br>
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect6', this.value)">
+                <button class="button" onclick="toggleSound('effect6', this)">Wood Impact</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect6', this.value)">
             </div>
         </section>
         
