@@ -120,3 +120,20 @@ hr {
     width: 15rem;
     height: .05rem;
 }
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--clr-element-primary);
+    color: var(--clr-element-secondary);
+    border: none;
+    border-radius: 5px;
+}
+
+.playing {
+    background-color: green;
+    color: var(--clr-element-secondary);
+}
