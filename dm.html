@@ -20,47 +20,393 @@
             }
         }
 
-        function setVolume(volume) {
-            var sounds = document.querySelectorAll('audio');
-            sounds.forEach(function(sound) {
-                sound.volume = volume;
+        function setVolume(soundId, volume) {
+            var sound = document.getElementById(soundId);
+            sound.volume = volume;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var thematicSounds = document.querySelectorAll('audio[id^="sound"]');
+            var combatSounds = document.querySelectorAll('audio[id^="combat"]');
+            
+            thematicSounds.forEach(function(sound) {
+                sound.loop = true;
             });
-        }
 
-        function loadSounds() {
-            fetch('sounds/')
-                .then(response => response.text())
-                .then(data => {
-                    var parser = new DOMParser();
-                    var doc = parser.parseFromString(data, 'text/html');
-                    var sounds = doc.querySelectorAll('a[href$=".mp3"]');
-                    var soundboard = document.getElementById('soundboard');
-                    sounds.forEach((sound, index) => {
-                        var soundId = 'sound' + (index + 1);
-                        var button = document.createElement('button');
-                        button.className = 'button';
-                        button.textContent = sound.href.split('/').pop();
-                        button.setAttribute('onclick', `toggleSound('${soundId}', this)`);
-                        soundboard.appendChild(button);
-
-                        var audio = document.createElement('audio');
-                        audio.id = soundId;
-                        audio.src = sound.href;
-                        soundboard.appendChild(audio);
-                    });
-                });
-        }
-
-        document.addEventListener('DOMContentLoaded', loadSounds);
+            combatSounds.forEach(function(sound) {
+                sound.loop = true;
+            });
+        });
     </script>
 </head>
 <body>
     <main>
         <h1>DM Soundboard</h1>
-        <div id="soundboard"></div>
+        <h2>Thematic Music</h2>
+
+        <section class="soundboard">
+            
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound1', this)">Abandoned Ruins</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound1', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound2', this)">Ancient Evil Awakens</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound2', this.value)">
+            <br>
+            </div>
+    
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound3', this)">Ashen Trails</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound3', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound4', this)">Catacombs</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound4', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound5', this)">Cemetery</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound5', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound6', this)">Cozy Tavern</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound6', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound7', this)">Dark Castle</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound7', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound8', this)">Elven Garden</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound8', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound9', this)">Ethereal Plane</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound9', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound10', this)">Journey's End</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound10', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound11', this)">Long Rest</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound11', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound12', this)">Shady Tavern</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound12', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound13', this)">Small City</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound13', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound14', this)">Suspense</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound14', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound15', this)">Tense</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound15', this.value)">
+            <br>
+            </div>
+
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('sound16', this)">End of the Quest</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('sound16', this.value)">
+            <br>
+            </div>
+        </section>
+
         <br>
-        <label for="volume">Volume:</label>
-        <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" onchange="setVolume(this.value)">
+        <h2>Battle Music</h2>
+
+        <section class="soundboard">
+            <div class="sound-controls"></div>
+                <button class="button" onclick="toggleSound('combat1', this)">Duel</button>
+                <br>
+                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat1', this.value)">
+            </div>
+
+            <div class="sound-controls">
+                <button class="button" onclick="toggleSound('combat2', this)">Dungeon Boss</button>
+                <br>
+                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat2', this.value)">
+            </div>
+
+            <div class="sound-controls">
+                <button class="button" onclick="toggleSound('combat3', this)">Eerie</button>
+                <br>
+                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat3', this.value)">
+            </div>
+
+            <div class="sound-controls">
+                <button class="button" onclick="toggleSound('combat4', this)">Skeletons</button>
+                <br>
+                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat4', this.value)">
+            </div>
+
+            <div class="sound-controls">
+                <button class="button" onclick="toggleSound('combat5', this)">The Last Fight</button>
+                <br>
+                <input type="range" min="0" max="1" step="0.01" onchange="setVolume('combat5', this.value)">
+            </div>
+        </section>
+
+        <br>
+        <h2>Ambience</h2>
+
+        <section class="soundboard">
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience1', this)">Applause</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience1', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience2', this)">Approaching Storm</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience2', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience3', this)">Campfire Crackle</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience3', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience4', this)">Cave</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience4', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience5', this)">Clock Tower</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience5', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience6', this)">Clock Windups</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience6', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience7', this)">Dark Chanting</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience7', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience8', this)">Distant Storm</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience8', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience9', this)">Dogs Barking</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience9', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience10', this)">Forest - Day</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience10', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience11', this)">Forest - Day 2</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience11', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience12', this)">Forest - Day 3</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience12', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience13', this)">Forest - Night</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience13', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience14', this)">Forest - Creek</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience14', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience15', this)">Horse Gallop</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience15', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience16', this)">Monk Chanting</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience16', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience17', this)">Rumble</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience17', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience18', this)">Ticking</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience18', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience19', this)">Walking on Cement</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience19', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience20', this)">Walking on Gravel</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience20', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience21', this)">Walking on Leaves</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience21', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience22', this)">Walking on Road</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience22', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience23', this)">War Horn</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience23', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('ambience24', this)">Whispering</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('ambience24', this.value)">
+            </div>
+        </section>
+
+        <br>
+        <h2>Sound Effects</h2>
+        
+        <section class="soundboard">
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('effect1', this)">Cultist Chant</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect1', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('effect2', this)">Explosion</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect2', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('effect3', this)">Sword Blocked</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect3', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('effect4', this)">Sword Critical</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect4', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('effect5', this)">Sword Hit</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect5', this.value)">
+            </div>
+            <div class="sound-controls">
+            <button class="button" onclick="toggleSound('effect6', this)">Wood Impact</button>
+            <br>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('effect6', this.value)">
+            </div>
+        </section>
+        
+        <audio id="sound1" src="sounds/Music - Abandoned Ruins.mp3"></audio>
+        <audio id="sound2" src="sounds/Music - Ancient Evil Awakens.mp3"></audio>
+        <audio id="sound3" src="sounds/Music - Ashen Trails.mp3"></audio>
+        <audio id="sound4" src="sounds/Music - Catacombs.mp3"></audio>
+        <audio id="sound5" src="sounds/Music - Cemetery.mp3"></audio>
+        <audio id="sound6" src="sounds/Music - Cozy Tavern.mp3"></audio>
+        <audio id="sound7" src="sounds/Music - Dark Castle.mp3"></audio>
+        <audio id="sound8" src="sounds/Music - Elven Garden.mp3"></audio>
+        <audio id="sound9" src="sounds/Music - Ethereal Plane.mp3"></audio>
+        <audio id="sound10" src="sounds/Music - Journey's End.mp3"></audio>
+        <audio id="sound11" src="sounds/Music - Long Rest.mp3"></audio>
+        <audio id="sound12" src="sounds/Music - Shady Tavern.mp3"></audio>
+        <audio id="sound13" src="sounds/Music - Small City.mp3"></audio>
+        <audio id="sound14" src="sounds/Music - Suspense.mp3"></audio>
+        <audio id="sound15" src="sounds/Music - Tense.mp3"></audio>
+        <audio id="sound16" src="sounds/Music - The End of the Quest.mp3"></audio>
+        <audio id="combat1" src="sounds/Music - Combat - Duel.mp3"></audio>
+        <audio id="combat2" src="sounds/Music - Combat - Dungeon Boss.mp3"></audio>
+        <audio id="combat3" src="sounds/Music - Combat - Eerie.mp3"></audio>
+        <audio id="combat4" src="sounds/Music - Combat - Skeletons.mp3"></audio>
+        <audio id="combat5" src="sounds/Music - Combat - The Last Fight.mp3"></audio>
+        <audio id="ambience1" src="sounds/Ambience - Applause.mp3"></audio>
+        <audio id="ambience2" src="sounds/Ambience - Approaching Storm.mp3"></audio>
+        <audio id="ambience3" src="sounds/Ambience - Campfire Crackle.mp3"></audio>
+        <audio id="ambience4" src="sounds/Ambience - Cave.mp3"></audio>
+        <audio id="ambience5" src="sounds/Ambience - Clock Tower.mp3"></audio>
+        <audio id="ambience6" src="sounds/Ambience - Clock Windups.mp3"></audio>
+        <audio id="ambience7" src="sounds/Ambience - Dark Chanting.mp3"></audio>
+        <audio id="ambience8" src="sounds/Ambience - Approaching Storm.mp3"></audio>
+        <audio id="ambience9" src="sounds/Ambience - Dogs Barking.mp3"></audio>
+        <audio id="ambience10" src="sounds/Ambience - Forest - Day.mp3"></audio>
+        <audio id="ambience11" src="sounds/Ambience - Forest - Day 2.mp3"></audio>
+        <audio id="ambience12" src="sounds/Ambience - Forest - Day 3.mp3"></audio>
+        <audio id="ambience13" src="sounds/Ambience - Forest - Night.mp3"></audio>
+        <audio id="ambience14" src="sounds/Ambience - Forest - Creek.mp3"></audio>
+        <audio id="ambience15" src="sounds/Ambience - Horse Gallop.mp3"></audio>
+        <audio id="ambience16" src="sounds/Ambience - Monk Chant.mp3"></audio>
+        <audio id="ambience17" src="sounds/Ambience - Rumble.mp3"></audio>
+        <audio id="ambience18" src="sounds/Ambience - Ticking.mp3"></audio>
+        <audio id="ambience19" src="sounds/Ambience - Walking on Cement.mp3"></audio>
+        <audio id="ambience20" src="sounds/Ambience - Walking on Gravel.mp3"></audio>
+        <audio id="ambience21" src="sounds/Ambience - Walking on Leaves.mp3"></audio>
+        <audio id="ambience22" src="sounds/Ambience - Walking on Road.mp3"></audio>
+        <audio id="ambience23" src="sounds/Ambience - War Horn.mp3"></audio>
+        <audio id="ambience24" src="sounds/Ambience - Whispering.mp3"></audio>
+        <audio id="effect1" src="sounds/Effect - Cultist Chant.wav"></audio>
+        <audio id="effect2" src="sounds/Effect - Explosion.mp3"></audio>
+        <audio id="effect3" src="sounds/Effect - Sword Blocked.mp3"></audio>
+        <audio id="effect4" src="sounds/Effect - Sword Critical.ogg"></audio>
+        <audio id="effect5" src="sounds/Effect - Sword Hit.mp3"></audio>
+        <audio id="effect6" src="sounds/Effect - Wood Impact.wav"></audio>
     </main>
 </body>
 </html>
