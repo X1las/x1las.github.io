@@ -17,12 +17,38 @@
             border-radius: 5px;
         }
     </style>
+    <script>
+        let currentSound = null;
+
+        function toggleSound(soundId) {
+            var sound = document.getElementById(soundId);
+            if (currentSound && currentSound !== sound) {
+                currentSound.pause();
+                currentSound.currentTime = 0;
+            }
+            if (sound.paused) {
+                sound.play();
+                currentSound = sound;
+            } else {
+                sound.pause();
+            }
+        }
+
+        function setVolume(volume) {
+            if (currentSound) {
+                currentSound.volume = volume;
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Soundboard</h1>
-    <button class="button" onclick="playSound('sound1')">Sound 1</button>
-    <button class="button" onclick="playSound('sound2')">Sound 2</button>
-    <button class="button" onclick="playSound('sound3')">Sound 3</button>
+    <button class="button" onclick="toggleSound('sound1')">Sound 1</button>
+    <button class="button" onclick="toggleSound('sound2')">Sound 2</button>
+    <button class="button" onclick="toggleSound('sound3')">Sound 3</button>
+    <br>
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" onchange="setVolume(this.value)">
 
     <audio id="sound1" src="sounds\Music - Catacombs.mp3"></audio>
     <audio id="sound2" src="sound2.wav"></audio>
