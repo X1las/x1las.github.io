@@ -86,24 +86,55 @@ main {
     max-width: 100%;
 }
 
-
-table {
+.table-container {
     width: 100%;
-    border-collapse: collapse;
     overflow-x: auto;
     display: block;
+    margin: 1rem 0;
+}
+
+table {
+    width: fit-content;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--clr-text-secondary);
+    margin: 0;
 }
 
 td {
-    padding: 0.1rem 0.3rem;
-    text-align: center;
+    padding: 0.5rem 1rem;
+    text-align: left;
     word-wrap: break-word;
+    border: 1px solid var(--clr-text-secondary);
+    white-space: normal;
+    vertical-align: top;
 }
 
 th {
-    padding: 0.1rem 0.3rem;
-    text-align: center;
+    padding: 0.5rem 1rem;
+    text-align: left;
     word-wrap: break-word;
+    border: 1px solid var(--clr-text-secondary);
+    background-color: var(--clr-element-primary);
+    color: var(--clr-element-secondary);
+    white-space: normal;
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    td, th {
+        white-space: nowrap;  /* Prevent text wrapping on mobile */
+    }
 }
 
 hr {

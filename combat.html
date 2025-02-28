@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D&D 5e - Combat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic guide to combat in D&D 5e">
+    <link rel="stylesheet" href="shared.css">
+    <script src="shared.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="guide.html">Home</a>
+                <a href="player.html">New Player</a>
+                <a href="combat.html" style="display: none;">Combat</a>
+                <a href="feats.html">Feats</a>
+                <a href="spellcasting.html">Spellcasting</a>
+                <a href="divinity.html">Divinity</a>
+                <a href="items.html">Items</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Combat Basics</h1>
+        <hr>
+        <p>Combat in D&D 5e is turn-based and organized into rounds. Each round, every participant gets one turn to act. For an alternative combat system, check out our <a href="divinity.html">Divinity Combat Rules</a>.</p>
+
+        <h2>Initiative</h2>
+        <hr id="half">
+        <p>At the start of combat, everyone rolls initiative (d20 + Dexterity modifier). This determines the order in which participants take their turns.</p>
+        
+        <h2>Surprise</h2>
+        <hr id="half">
+        <p>If you come across enemies that aren't aware of you, you might surprise them:</p>
+        <ul>
+            <li>The DM determines who might be surprised</li>
+            <li>If you're hidden, compare your Stealth check to enemies' passive Perception</li>
+            <li>Surprised creatures can't move or take actions on their first turn</li>
+            <li>Surprised creatures can't take reactions until after their first turn</li>
+            <li>After the first turn, surprise ends and combat continues normally</li>
+        </ul>
+        
+        <h2>Your Turn</h2>
+        <hr id="half">
+        <p>On your turn, you can:</p>
+        <ul>
+            <li><b>Move</b> up to your speed (usually 30 feet)</li>
+            <li>Take one <b>Action</b></li>
+            <li>Take one <b>Bonus Action</b> (if available)</li>
+            <li>Use one <b>Free Action</b> (like speaking or dropping an item)</li>
+        </ul>
+
+        <h2>Actions in Combat</h2>
+        <hr id="half">
+        <p>Common actions you can take:</p>
+        <ul>
+            <li><b>Attack</b>: Make one or more attacks</li>
+            <li><b>Cast a Spell</b>: Cast a spell with a casting time of 1 action</li>
+            <li><b>Dash</b>: Double your movement speed</li>
+            <li><b>Disengage</b>: Move away without provoking opportunity attacks</li>
+            <li><b>Dodge</b>: Impose disadvantage on attacks against you</li>
+            <li><b>Help</b>: Give advantage to an ally's next ability check or attack</li>
+            <li><b>Hide</b>: Make a Stealth check to hide</li>
+            <li><b>Ready</b>: Prepare an action for a specific trigger</li>
+            <li><b>Use an Object</b>: Interact with a second object or environmental feature</li>
+        </ul>
+
+        <h2>Making an Attack</h2>
+        <hr id="half">
+        <p>To make an attack:</p>
+        <ol>
+            <li>Choose a target within range</li>
+            <li>Roll d20 + attack modifier</li>
+            <li>Compare to target's AC</li>
+            <li>If you hit, roll damage</li>
+        </ol>
+
+        <h2>Cover</h2>
+        <hr id="half">
+        <p>Objects can provide cover to targets:</p>
+        <ul>
+            <li><b>Half Cover</b>: +2 to AC and Dexterity saving throws</li>
+            <li><b>Three-Quarters Cover</b>: +5 to AC and Dexterity saving throws</li>
+            <li><b>Full Cover</b>: Can't be targeted directly</li>
+        </ul>
+
+        <h2>Reactions</h2>
+        <hr id="half">
+        <p>You get one reaction per round, which you can use for:</p>
+        <ul>
+            <li><b>Opportunity Attacks</b>: When an enemy leaves your reach</li>
+            <li><b>Ready Action</b>: When your specified trigger occurs</li>
+            <li><b>Certain Spells</b>: Such as Shield or Counterspell</li>
+        </ul>
+
+        <h2>Conditions</h2>
+        <hr id="half">
+        <p>Conditions alter a creature's capabilities in various ways:</p>
+
+        <h3>Basic Conditions</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Blinded</th>
+                    <th>Charmed</th>
+                    <th>Deafened</th>
+                    <th>Frightened</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        Can't see.<br>
+                        Fails sight-based checks.<br>
+                        Attacks against it have advantage.<br>
+                        Its attacks have disadvantage.
+                    </td>
+                    <td>
+                        Can't attack the charmer.<br>
+                        Can't harm the charmer.<br>
+                        Charmer has advantage on social checks.
+                    </td>
+                    <td>
+                        Can't hear.<br>
+                        Fails hearing-based checks.
+                    </td>
+                    <td>
+                        Disadvantage on checks and attacks while source is visible.<br>
+                        Can't move closer to fear source.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Movement Conditions</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Grappled</th>
+                    <th>Prone</th>
+                    <th>Restrained</th>
+                    <th>Invisible</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        Speed becomes 0.<br>
+                        Ends if grappler is incapacitated.<br>
+                        Ends if moved out of reach.
+                    </td>
+                    <td>
+                        Can only crawl.<br>
+                        Disadvantage on attacks.<br>
+                        Melee attacks against it have advantage.<br>
+                        Ranged attacks have disadvantage.
+                    </td>
+                    <td>
+                        Speed becomes 0.<br>
+                        Attacks against it have advantage.<br>
+                        Its attacks have disadvantage.<br>
+                        Disadvantage on Dex saves.
+                    </td>
+                    <td>
+                        Can't be seen normally.<br>
+                        Heavily obscured.<br>
+                        Has advantage on attacks.<br>
+                        Attacks against it have disadvantage.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Incapacitating Conditions</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Incapacitated</th>
+                    <th>Paralyzed</th>
+                    <th>Stunned</th>
+                    <th>Unconscious</th>
+                    <th>Petrified</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        Can't take actions.<br>
+                        Can't take reactions.
+                    </td>
+                    <td>
+                        Can't move or speak.<br>
+                        Fails Str/Dex saves.<br>
+                        Attacks have advantage.<br>
+                        Melee hits auto-crit.
+                    </td>
+                    <td>
+                        Can't act or move.<br>
+                        Can barely speak.<br>
+                        Fails Str/Dex saves.<br>
+                        Attacks have advantage.
+                    </td>
+                    <td>
+                        Incapacitated.<br>
+                        Drops items, falls prone.<br>
+                        Fails Str/Dex saves.<br>
+                        Melee hits auto-crit.
+                    </td>
+                    <td>
+                        Turned to stone.<br>
+                        Can't act or move.<br>
+                        Resistant to damage.<br>
+                        Immune to poison/disease.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Alternative Rules</h2>
+        <hr id="half">
+        <p>For a more tactical combat experience, consider using our <a href="divinity.html">Divinity-inspired combat system</a>, which uses Action Points (AP) instead of the standard action economy.</p>
+    </main>
+</body>
+</html>
