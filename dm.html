@@ -129,6 +129,12 @@
             </div>
 
             <div class="sound-controls">
+                <button class="button" onclick="toggleSound('sound8a', this)">Forsaken Town</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound8a', this.value)">
+            </div>
+
+            <div class="sound-controls">
                 <button class="button" onclick="toggleSound('sound9', this)">Ethereal Plane</button>
                 <br>
                 <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound9', this.value)">
@@ -533,6 +539,7 @@
         <audio id="sound6" src="sounds/Music - Cozy Tavern.mp3"></audio>
         <audio id="sound7" src="sounds/Music - Dark Castle.mp3"></audio>
         <audio id="sound8" src="sounds/Music - Elven Garden.mp3"></audio>
+        <audio id="sound8a" src="sounds/Music - Forsaken Town.mp3"></audio>
         <audio id="sound9" src="sounds/Music - Ethereal Plane.mp3"></audio>
         <audio id="sound10" src="sounds/Music - Journey's End.mp3"></audio>
         <audio id="sound11" src="sounds/Music - Long Rest.mp3"></audio>
