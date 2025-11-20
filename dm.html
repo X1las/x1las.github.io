@@ -75,6 +75,12 @@
         <section class="soundboard">
 
             <div class="sound-controls">
+                <button class="button" onclick="toggleSound('sound0', this)">A New Dawn</button>
+                <br>
+                <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound0', this.value)">
+            </div>
+
+            <div class="sound-controls">
                 <button class="button" onclick="toggleSound('sound1', this)">Abandoned Ruins</button>
                 <br>
                 <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('sound1', this.value)">
@@ -518,6 +524,7 @@
                 <input class="slider" type="range" min="0" max="1" step="0.01" onchange="setVolume('effect7', this.value)">
         </section>
         
+        <audio id="sound0" src="sounds/Music - A New Dawn.mp3"></audio>
         <audio id="sound1" src="sounds/Music - Abandoned Ruins.mp3"></audio>
         <audio id="sound2" src="sounds/Music - Ancient Evil Awakens.mp3"></audio>
         <audio id="sound3" src="sounds/Music - Ashen Trails.mp3"></audio>
